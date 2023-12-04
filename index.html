@@ -1,13 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<title>Confirmação de Presença</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Confirmação de Presença</title>
 </head>
 <body>
-	
-	<script src="script.js"></script>
+
+    <div class="container">
+        <h2>Confirmação de Presença</h2>
+        <p>Olá, convidado! Por favor, confirme sua presença:</p>
+        <form id="confirmationForm">
+            <label for="name">Seu Nome:</label>
+            <input type="text" id="name" required>
+
+            <label for="confirmation">Confirmar Presença:</label>
+            <select id="confirmation" required>
+                <option value="sim">Sim, estarei presente</option>
+                <option value="nao">Não poderei comparecer</option>
+            </select>
+
+            <button type="button" onclick="submitForm()">Confirmar</button>
+        </form>
+
+        <div id="confirmationMessage"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
